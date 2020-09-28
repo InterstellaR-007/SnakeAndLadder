@@ -30,16 +30,22 @@ namespace SnakeAndLadder
                 {
                     Console.WriteLine("\n Ladder: Position incremented by " + die_Roll_Number + "\n");
                     player_Position = player_Position + die_Roll_Number;
+                    if (player_Position > 100)
+                    {
+                        player_Position = player_Position - die_Roll_Number;
+                    }
                 }
                 else
                 {
                     Console.WriteLine("\n Snake: Position decremented by " + die_Roll_Number + "\n");
                     player_Position = player_Position - die_Roll_Number;
+                    if (player_Position < 0)
+                    {
+                        player_Position = 0;
+                    }
                 }
-                if (player_Position < 0)
-                {
-                    player_Position = 0;
-                }
+                
+                
 
                 Console.WriteLine("Player Position after die rolling is  : " + player_Position);
 
