@@ -9,7 +9,7 @@ namespace SnakeAndLadder
             int die_Roll_Number;
             int snake_Ladder_Options;
             int player_Position;
-
+            int count=0;
 
             player_Position = 0;
 
@@ -19,6 +19,7 @@ namespace SnakeAndLadder
                 Console.WriteLine("\nCurrent Position of Player is : " + player_Position);
                 Random rnd = new Random();
                 die_Roll_Number = rnd.Next(1, 7);
+                count = count + 1;
                 Console.WriteLine("Number getting after Rolling Die is : " + die_Roll_Number);
                 snake_Ladder_Options = rnd.Next(1, 4);
 
@@ -50,6 +51,8 @@ namespace SnakeAndLadder
                 Console.WriteLine("Player Position after die rolling is  : " + player_Position);
 
             }
+                Console.WriteLine("\n Number of Times Dice is rolled   : " + count);
+
         }
     }
 }
